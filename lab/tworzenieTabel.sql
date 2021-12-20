@@ -1,5 +1,5 @@
 use Biblioteka
-
+--create database Biblioteka
 CREATE TABLE Adres (
 	Adres_ID INT NOT NULL PRIMARY KEY IDENTITY,
 	Kraj VARCHAR(64),

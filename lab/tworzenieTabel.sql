@@ -1,3 +1,4 @@
+use Biblioteka
 
 CREATE TABLE Adres (
 	Adres_ID INT NOT NULL PRIMARY KEY IDENTITY,
@@ -6,12 +7,12 @@ CREATE TABLE Adres (
 	Kod_pocztowy CHAR(6) CHECK (Kod_pocztowy like '[0-9][0-9]-[0-9][0-9][0-9]'),
 	Ulica VARCHAR(64),
 	Numer_budynku INT CHECK (Numer_budynku <= 1000),
-	Numer_mieszkania CHAR(3)
+	Numer_mieszkania CHAR(6)
 );
 
 CREATE TABLE Wydawca (
 	Wydawca_ID INT NOT NULL PRIMARY KEY IDENTITY,
-	Adres_ID INT NOT NULL REFERENCES Adres ON UPDATE CASCADE,
+	Adres_ID INT REFERENCES Adres ON UPDATE CASCADE,
 	Nazwa VARCHAR(128)
 );
 

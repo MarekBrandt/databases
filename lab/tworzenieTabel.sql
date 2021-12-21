@@ -1,5 +1,6 @@
 use Biblioteka
 --create database Biblioteka
+--drop database Biblioteka
 CREATE TABLE Adres (
 	Adres_ID INT NOT NULL PRIMARY KEY IDENTITY,
 	Kraj VARCHAR(64),
@@ -43,7 +44,7 @@ CREATE TABLE Wydanie (
 	Wydanie_ID INT NOT NULL PRIMARY KEY IDENTITY,
 	Ksiazka_ID INT NOT NULL REFERENCES Ksiazka ON DELETE CASCADE ON UPDATE CASCADE,
 	Wydawca_ID INT NOT NULL REFERENCES Wydawca ON DELETE CASCADE ON UPDATE CASCADE,
-	ISBN CHAR(13),
+	ISBN CHAR(20),
 	Rok INT CHECK (Rok < 10000 ),
 	Liczba_stron INT CHECK (Liczba_stron < 1000000),
 	Opis_ksiazki VARCHAR(2000)

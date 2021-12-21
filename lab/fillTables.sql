@@ -1,197 +1,162 @@
 use Biblioteka
 
+INSERT INTO Gatunek (Nazwa) VALUES	
+	('Fantasy'),
+	('Science fiction'),
+	('Horror'),
+	('Literatura popularnonaukowa'),
+	('Belterystyka'),
+	('Literatura m³odzie¿owa'),
+	('Powieœæ przygodowa'),
+	('Astronomia'),
+	('Astrofizyka'),
+	('Jêzykoznastwo'),
+	('Jêzyk angielski');
+
 INSERT INTO Adres VALUES ('Polska', 'Lublin', '20-834', 'Irysowa', 25,'a');
 INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Fabryka s³ów');
-INSERT INTO Adres VALUES ('Polska', 'Poznañ', '61-311', '£ugañska', 1,'');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Zysk i s-ka');
-INSERT INTO Adres VALUES ('Polska', 'Warszawa', '02-972', 'Hlonda', 2,'a25');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Albatros');
-INSERT INTO Adres VALUES ('Polska', 'P³ock', '11-281', 'Alfreda', 11,'c');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Jaguar');
-INSERT INTO Adres VALUES ('Polska', 'Warszawa', '02-965', 'Towarowa', 1,'');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Altenberg');
-INSERT INTO Adres VALUES ('Polska', 'Gdañsk', '38-400', 'Grunwaldzka', 120,'');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Helion');
-INSERT INTO Adres VALUES ('Polska', 'Gdañsk', '39-400', 'Jesionowa', 18,'d20');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Greg');
-INSERT INTO Adres VALUES ('Polska', 'Gdañsk', '39-400', 'Jesionowa', 18,'d21');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Gregus');
-INSERT INTO Adres VALUES ('Polska', 'Wroc³aw', '12-400', 'Warszawska', 28,'1');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Papilon');
-INSERT INTO Adres VALUES ('Polska', 'Grudzi¹dz', '88-480', 'Jeziorna', 30,'');
-INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Galaktyka');
 
---INSERT INTO Adres (Kraj, Miasto, Kod_pocztowy, Ulica, Numer_budynku, Numer_mieszkania) VALUES	
---		('Polska', 'Koœcierzyna', '83-400', 'Wodna', 18,''), 
---		('Polska', 'Gniewino', '15-240', 'Gniewna', 20, 'b'),
---		('Polska', 'Sejny', '65-420', 'Litewska', 2, ''),
---		('Polska', 'Lublin', '20-834', 'Irysowa', 25,'a'), 
---		('Polska', 'Poznañ', '61-311', '£ugañska', 1,''),
---		('Polska', 'Warszawa', '02-972', 'Hlonda', 2,'a25'),
---		('Polska', 'P³ock', '11-281', 'Alfreda', 11,'c'),
---		('Polska', 'Warszawa', '02-965', 'Towarowa', 1,''),
---		('Polska', 'Gdañsk', '38-400', 'Grunwaldzka', 120,''),
---		('Polska', 'Gdañsk', '39-400', 'Jesionowa', 18,'d20'),
---		('Polska', 'Wroc³aw', '12-400', 'Warszawska', 28,'1'),
---		('Polska', 'Grudzi¹dz', '88-480', 'Jeziorna', 30,'');
-
-
-
---INSERT INTO Wydawca (Adres_ID, Nazwa) VALUES	
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '20-834' and Ulica = 'Irysowa' and Numer_budynku = 25 and Numer_mieszkania = 'a')), 'Fabryka s³ów'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '61-311' and Ulica = '£ugañska' and Numer_budynku = 1 and Numer_mieszkania = '')), 'Zysk i s-ka'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '02-972' and Ulica = 'Hlonda' and Numer_budynku = 2 and Numer_mieszkania = 'a25')), 'Albatros'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '11-281' and Ulica = 'Alfreda' and Numer_budynku = 11 and Numer_mieszkania = 'c')), 'Jaguar'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '02-965' and Ulica = 'Towarowa' and Numer_budynku = 1 and Numer_mieszkania = '')), 'Altenberg'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '38-400' and Ulica = 'Grunwaldzka' and Numer_budynku = 120 and Numer_mieszkania = '')), 'Helion'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '39-400' and Ulica = 'Jesionowa' and Numer_budynku = 18 and Numer_mieszkania = 'd20')), 'Greg'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '39-400' and Ulica = 'Jesionowa' and Numer_budynku = 18 and Numer_mieszkania = 'd21')), 'Gregus'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '12-400' and Ulica = 'Warszawska' and Numer_budynku = 28 and Numer_mieszkania = '1')), 'Papilon'),
---			((SELECT Adres_ID FROM Adres WHERE (Kod_pocztowy = '88-480' and Ulica = 'Jeziorna' and Numer_budynku = 30 and Numer_mieszkania = '')), 'Galaktyka');
-
---INSERT INTO Ksiazka (Tytul) VALUES 
---			('Pan Lodowego Ogrodu 1'),
---			('Jeszcze Krótrsza Historia Czasu'),
---			('Wielki Projekt'),
---			('Dru¿yna 6: Nieznany L¹d'),
---			('Pan Lodowego Ogrodu 2'),
---			('Grama to nie drama'),
---			('Achaja'),
---			('Mroczna wie¿a'),
---			('Gra o tron'),
---			('Uczta dla wron'),
---			('Hobbit, podró¿ tam i z powrotem'),
---			('Zwiadowcy 1'),
---			('Kmieciowisko'),
---			('Smolaris');
-
-INSERT INTO Gatunek (Nazwa) VALUES	
-			('Fantasy'),
-			('Science fiction'),
-			('Horror'),
-			('Literatura popularnonaukowa'),
-			('Belterystyka'),
-			('Literatura m³odzie¿owa'),
-			('Powieœæ przygodowa'),
-			('Astronomia'),
-			('Astrofizyka'),
-			('Jêzykoznastwo'),
-			('Jêzyk angielski');
+INSERT INTO Autor VALUES ('Jaros³aw', 'Grzêdowicz', NULL, 'Polska');
 
 INSERT INTO Ksiazka VALUES ('Pan Lodowego Ogrodu 1');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Science fiction');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Belterystyka');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka')); 
 
-INSERT INTO Ksiazka VALUES ('Jeszcze Krótrsza Historia Czasu');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura popularnonaukowa');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astronomia');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astrofizyka');
-
-INSERT INTO Ksiazka VALUES ('Wielki Projekt');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura popularnonaukowa');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astronomia');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astrofizyka');
-
-INSERT INTO Ksiazka VALUES ('Dru¿yna 6: Nieznany L¹d');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura m³odzie¿owa');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '978-3-16-148410-0', 1997, 304, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
 
 INSERT INTO Ksiazka VALUES ('Pan Lodowego Ogrodu 2');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Science fiction');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Belterystyka');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka'));
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '978-3-16-148880-0', 2003, 400, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Autor VALUES ('Stephen', 'Hawking', 1942, 'Wielka Brytania');
+
+INSERT INTO Adres VALUES ('Polska', 'Poznañ', '61-311', '£ugañska', 1,'');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Zysk i s-ka');
+
+INSERT INTO Ksiazka VALUES ('Jeszcze Krótrsza Historia Czasu');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura popularnonaukowa');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astronomia');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astrofizyka');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka')); 
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '921-3-06-148880-0', 2015, 100, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Adres VALUES ('Polska', 'Warszawa', '02-972', 'Hlonda', 2,'a25');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Albatros');
+
+INSERT INTO Ksiazka VALUES ('Wielki Projekt');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura popularnonaukowa');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astronomia');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Astrofizyka');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka')); 
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '854-3-06-109880-0', 2013, 154, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Autor VALUES ('John', 'Flanagan', 1944, 'Australia');
+
+INSERT INTO Adres VALUES ('Polska', 'P³ock', '11-281', 'Alfreda', 11,'c');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Jaguar');
+
+INSERT INTO Ksiazka VALUES ('Dru¿yna 6: Nieznany L¹d');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura m³odzie¿owa');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka')); 
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '855-3-12-104530-0', 2005, 300, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Ksiazka VALUES ('Zwiadowcy 1');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura m³odzie¿owa');
+INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka')); 
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '374-3-06-104970-0', 1996, 253, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+
+INSERT INTO Autor VALUES ('Arlena', 'Witt', NULL, 'Polska');
+
+INSERT INTO Adres VALUES ('Polska', 'Warszawa', '02-965', 'Towarowa', 1,'');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Altenberg');
 
 INSERT INTO Ksiazka VALUES ('Grama to nie drama');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura popularnonaukowa');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Jêzykoznastwo');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Jêzyk angielski');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka')); 
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '891-3-06-224970-0', 2019, 194, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Autor VALUES ('Andrzej', 'Ziemiañski', NULL, 'Polska');
+
+INSERT INTO Adres VALUES ('Polska', 'Gdañsk', '38-400', 'Grunwaldzka', 120,'');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Helion');
 
 INSERT INTO Ksiazka VALUES ('Achaja');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Belterystyka');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Powieœæ przygodowa');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka')); 
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '926-3-06-534112-0', 2008, 304, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Autor VALUES ('George R.R.', 'Martin', 1948, NULL);
+
+INSERT INTO Adres VALUES ('Polska', 'Gdañsk', '39-400', 'Jesionowa', 18,'d20');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Greg');
 
 INSERT INTO Ksiazka VALUES ('Uczta dla wron');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Belterystyka');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Powieœæ przygodowa');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka'));
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '138-3-06-593632-1', 1999, 548, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Autor VALUES ('J. R. R.', 'Tolkien', NULL, 'Afryka');
+
+INSERT INTO Adres VALUES ('Polska', 'Gdañsk', '39-400', 'Jesionowa', 18,'d21');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Gregus');
 
 INSERT INTO Ksiazka VALUES ('Hobbit, podró¿ tam i z powrotem');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Belterystyka');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Powieœæ przygodowa');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka'));
 
-INSERT INTO Ksiazka VALUES ('Zwiadowcy 1');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Literatura m³odzie¿owa');
-INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '956-3-06-193632-1', 1997, 492, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Adres VALUES ('Polska', 'Wroc³aw', '12-400', 'Warszawska', 28,'1');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Papilon');
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '192-3-06-112232-1', 2001, 493, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Autor VALUES ('Andrzej', 'Kmieæ', 1956, 'Polska');
 
 INSERT INTO Ksiazka VALUES ('Kmieciowisko');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka'));
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '731-3-06-028332-7', 1942, 392, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
+
+INSERT INTO Adres VALUES ('Polska', 'Grudzi¹dz', '88-480', 'Jeziorna', 30,'');
+INSERT INTO Wydawca VALUES (IDENT_CURRENT( 'Adres' ),'Galaktyka');
 
 INSERT INTO Ksiazka VALUES ('Smolaris');
 INSERT INTO Ksiazka_gatunek VALUES	(IDENT_CURRENT('Ksiazka'), 'Fantasy');
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka'));
 
---INSERT INTO Ksiazka_gatunek (Ksiazka_ID, Gatunek_nazwa) VALUES	
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Pan Lodowego Ogrodu 1'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Pan Lodowego Ogrodu 1'),'Belterystyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Jeszcze Krótrsza Historia Czasu'),'Literatura popularnonaukowa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Jeszcze Krótrsza Historia Czasu'),'Astronomia'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Jeszcze Krótrsza Historia Czasu'),'Astrofizyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Wielki Projekt'),'Literatura popularnonaukowa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Wielki Projekt'),'Astronomia'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Wielki Projekt'),'Astrofizyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Dru¿yna 6: Nieznany L¹d'),'Literatura m³odzie¿owa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Dru¿yna 6: Nieznany L¹d'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Pan Lodowego Ogrodu 2'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Pan Lodowego Ogrodu 2'),'Science fiction'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Pan Lodowego Ogrodu 2'),'Belterystyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Grama to nie drama'),'Literatura popularnonaukowa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Grama to nie drama'),'Jêzykoznastwo'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Grama to nie drama'),'Jêzyk angielski'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Achaja'),'Belterystyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Achaja'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Achaja'),'Powieœæ przygodowa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Mroczna wie¿a'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Mroczna wie¿a'),'Horror'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Gra o tron'),'Belterystyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Gra o tron'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Gra o tron'),'Powieœæ przygodowa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Uczta dla wron'),'Belterystyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Uczta dla wron'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Uczta dla wron'),'Powieœæ przygodowa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Hobbit, podró¿ tam i z powrotem'),'Belterystyka'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Hobbit, podró¿ tam i z powrotem'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Hobbit, podró¿ tam i z powrotem'),'Powieœæ przygodowa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Zwiadowcy 1'),'Literatura m³odzie¿owa'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Zwiadowcy 1'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Kmieciowisko'),'Fantasy'),
---			((SELECT Ksiazka_ID FROM Ksiazka WHERE Tytul = 'Smolaris'),'Fantasy');
+INSERT INTO Autor VALUES ('John', 'Smith', 1983, 'Stany Zjednoczone');
 
+INSERT INTO Autor_ksiazka VALUES (IDENT_CURRENT('Autor'), IDENT_CURRENT('Ksiazka'));
+
+INSERT INTO Wydanie VALUES(IDENT_CURRENT('Ksiazka'), IDENT_CURRENT('Wydawca'), '731-3-06-028332-7', 1942, 392, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non lacus nisi. Nulla viverra, lectus ut lacinia mollis, nisi eros consectetur lacus, sit amet molestie ipsum neque eget sem. Donec commodo mauris ut erat aliquam venenatis. Phasellus non massa non erat eleifend posuere quis eu mi. Quisque quis pharetra elit. Quisque quam arcu, volutpat nec vestibulum ut, gravida nec erat. Fusce euismod faucibus vehicula. Vivamus a sagittis libero. Donec ligula purus, auctor ut pharetra eget, aliquam id sem. Vestibulum lorem dolor, elementum non magna non, mollis suscipit lorem. Curabitur pharetra varius diam id mattis. Integer sit amet nisi et est volutpat faucibus sit amet non erat. Aliquam scelerisque convallis eros, faucibus vehicula odio.');
 
 			
-INSERT INTO Autor (Imie, Nazwisko, Rok_urodzenia, Narodowosc) VALUES
-	('Stephen', 'Hawking', 1942, 'Wielka Brytania'),
-	('Jaros³aw', 'Grzêdowicz', NULL, 'Polska'),
-	('John', 'Flanagan', 1944, 'Australia'),
-	('George R.R.', 'Martin', 1948, NULL),
-	('Stephen', 'King', NULL, NULL),
-	('Arlena', 'Witt', NULL, 'Polska'),
-	('Andrzej', 'Ziemiañski', NULL, 'Polska'),
-	('J. R. R.', 'Tolkien', NULL, 'Afryka'),
-	('Andrzej', 'Kmieæ', 1956, 'Polska'),
-	('John', 'Smith', 1983, 'Stany Zjednoczone');
-	
---INSERT INTO Wydanie (Ksiazka_ID, Wydawca_ID, ISBN, Rok, Liczba_stron, Opis_ksiazki) VALUES
---	(
-
-
-
-
-			
-
-
-
 
 			
 
@@ -201,14 +166,12 @@ SELECT * FROM Ksiazka
 SELECT * FROM Gatunek
 SELECT * FROM Ksiazka_gatunek
 SELECT * FROM Autor
+SELECT * FROM Autor_ksiazka
+SELECT * FROM Wydanie
 
 
 
-DELETE FROM Wydawca
-dbcc checkident ('Wydawca', reseed, 0)
-DELETE FROM Adres
-dbcc checkident ('Adres', reseed, 0)
-DELETE FROM Ksiazka
-dbcc checkident ('Ksiazka', reseed, 0)
-DELETE FROM Gatunek
-dbcc checkident ('Gatunek', reseed, 0)
+
+
+--DELETE FROM Wydawca
+--dbcc checkident ('Wydawca', reseed, 0)

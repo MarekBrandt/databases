@@ -10,3 +10,4 @@
 --SELECT * FROM Czytelnik
 --SELECT * FROM Wypozyczenie
 --SELECT * FROM Kara
+

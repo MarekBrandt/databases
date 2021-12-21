@@ -261,33 +261,3 @@ INSERT INTO Egzemplarz VALUES(IDENT_CURRENT('Wydanie'), 0.05, 5, 1, '2009-09-12'
 INSERT INTO Egzemplarz VALUES(IDENT_CURRENT('Wydanie'), 0.50, 8, 1,'2009-09-12');
 INSERT INTO Egzemplarz VALUES(IDENT_CURRENT('Wydanie'), 0.01, 3, 1, '2007-03-15');
 
-
-
-
-
-
-			
-
-			
-
---SELECT * FROM Adres
---SELECT * FROM Wydawca
---SELECT * FROM Ksiazka
---SELECT * FROM Gatunek
---SELECT * FROM Ksiazka_gatunek
---SELECT * FROM Autor
---SELECT * FROM Autor_ksiazka
---SELECT * FROM Wydanie
---SELECT * FROM Egzemplarz
---SELECT * FROM Czytelnik
---SELECT * FROM Wypozyczenie
-
-
-
-
-
-
-
-
---DELETE FROM Wydawca
---dbcc checkident ('Wydawca', reseed, 0)

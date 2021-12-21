@@ -62,12 +62,11 @@ CREATE TABLE Egzemplarz (
 CREATE TABLE Czytelnik (
 	Czytelnik_ID INT NOT NULL PRIMARY KEY IDENTITY,
 	Adres_ID INT NOT NULL REFERENCES Adres ON UPDATE CASCADE,
-	Imie VARCHAR(16),
-	Nazwisko VARCHAR(32),
+	Imie  VARCHAR(16) NOT NULL,
+	Nazwisko VARCHAR(32) NOT NULL,
 	Data_urodzenia DATE,
-	Numer_telefonu CHAR(11) CHECK (Numer_telefonu like '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9]'),
-	Email VARCHAR(100) CHECK (Email like '%@%'),
-	Do_zaplaty FLOAT CHECK (Do_zaplaty >= 0)
+	Numer_telefonu CHAR(11) NOT NULL CHECK (Numer_telefonu like '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9]'),
+	Email VARCHAR(100) CHECK (Email like '%@%')
 );
 
 CREATE TABLE Wypozyczenie (

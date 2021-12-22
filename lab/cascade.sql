@@ -7,7 +7,11 @@ DELETE from Ksiazka where Tytul = 'Pan Lodowego Ogrodu 1';
 
 DELETE from Wypozyczenie where Czytelnik_ID = 8;
 
+Delete from Egzemplarz where Egzemplarz_ID = 34;
 
+Delete from wydanie where Wydanie_ID = 1
+
+delete from Adres where Adres_ID = 2
 
 
 SELECT * FROM Adres

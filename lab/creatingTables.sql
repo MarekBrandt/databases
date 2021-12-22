@@ -53,7 +53,7 @@ CREATE TABLE Wydanie (
 CREATE TABLE Egzemplarz (
 	Egzemplarz_ID INT NOT NULL PRIMARY KEY IDENTITY,
 	Wydanie_ID INT NOT NULL REFERENCES Wydanie ON DELETE CASCADE,
-	Kwota_za_przekr_dzien DECIMAL(4,2),
+	Kwota_za_przekr_dzien FLOAT,
 	Stan INT CHECK (Stan >0 AND Stan <=10),
 	W_posiadaniu BIT,
 	Data_dodania DATE

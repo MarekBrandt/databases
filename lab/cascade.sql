@@ -13,9 +13,9 @@ DELETE from Wypozyczenie where Czytelnik_ID = 8;
 SELECT * FROM Adres
 SELECT * FROM Wydawca
 SELECT * FROM Ksiazka
---SELECT * FROM Gatunek
+SELECT * FROM Gatunek
 SELECT * FROM Ksiazka_gatunek
---SELECT * FROM Autor
+SELECT * FROM Autor
 SELECT * FROM Autor_ksiazka
 SELECT * FROM Wydanie
 SELECT * FROM Egzemplarz

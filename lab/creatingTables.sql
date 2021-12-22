@@ -13,7 +13,7 @@ CREATE TABLE Adres (
 
 CREATE TABLE Wydawca (
 	Wydawca_ID INT NOT NULL PRIMARY KEY IDENTITY,
-	Adres_ID INT REFERENCES Adres,
+	Adres_ID INT REFERENCES Adres ON DELETE SET NULL,
 	Nazwa VARCHAR(128)
 );
 
@@ -61,7 +61,7 @@ CREATE TABLE Egzemplarz (
 
 CREATE TABLE Czytelnik (
 	Czytelnik_ID INT NOT NULL PRIMARY KEY IDENTITY,
-	Adres_ID INT NOT NULL REFERENCES Adres,
+	Adres_ID INT REFERENCES Adres ON DELETE SET NULL ,
 	Imie  VARCHAR(16) NOT NULL,
 	Nazwisko VARCHAR(32) NOT NULL,
 	Data_urodzenia DATE,
@@ -71,8 +71,8 @@ CREATE TABLE Czytelnik (
 
 CREATE TABLE Wypozyczenie (
 	Wypozyczenie_ID INT NOT NULL PRIMARY KEY IDENTITY,
-	Czytelnik_ID INT NOT NULL REFERENCES Czytelnik,
-	Egzemplarz_ID INT NOT NULL REFERENCES Egzemplarz,
+	Czytelnik_ID INT REFERENCES Czytelnik ON DELETE SET NULL,
+	Egzemplarz_ID INT REFERENCES Egzemplarz ON DELETE SET NULL,
 	Data_wypozyczenia DATE,
 	Do_kiedy DATE,
 	Data_oddania DATE,

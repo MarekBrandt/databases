@@ -17,7 +17,7 @@ delete from Adres where Adres_ID = 2
 SELECT * FROM Adres
 SELECT * FROM Wydawca
 SELECT * FROM Ksiazka
---SELECT * FROM Gatunek
+SELECT * FROM Gatunek
 SELECT * FROM Ksiazka_gatunek
 --SELECT * FROM Autor
 SELECT * FROM Autor_ksiazka
@@ -27,3 +27,7 @@ SELECT * FROM Czytelnik
 SELECT * FROM Wypozyczenie
 SELECT * FROM Kara
 
+SELECT * FROM Ksiazka
+SELECT * FROM Wydanie
+SELECT * FROM Egzemplarz
+SELECT * FROM Wypozyczenie
